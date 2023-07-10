@@ -26,7 +26,7 @@ st.write('''
          and Statistics.
          
          In order to optimize bibliographic reviews using the library, this app
-         was developed. With it you enter at least 4 keywords - in order of importance for the query.
+         was developed. With it you enter a maximum of 4 keywords - in order of importance for the query.
          
          Thanks and credits to **[arXiv API](https://info.arxiv.org/help/api/basics.html#about)** contributors 
                                              and Lukas Schwab for adapting 
