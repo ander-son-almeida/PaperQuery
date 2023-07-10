@@ -83,7 +83,7 @@ if st.sidebar.button("Scan papers 🔍"):
             
             # update dataframe
             df = df.append({'Title': result.title, 
-                            'Autors': (result.authors)[0], 
+                            'Autors': (result.authors), 
                             'Published': result.published}, ignore_index=True)
             empty_slot.dataframe(df)
             
