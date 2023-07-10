@@ -80,12 +80,7 @@ if st.sidebar.button("Scan papers 🔍"):
     
     with zipfile.ZipFile(buffer, 'w') as zip_file:
         for result in search.results():
-            
-            # update dataframe
-            # df = df.append({'Title': result.title, 
-            #                 'Autors': (result.authors)[0], 
-            #                 'Published': result.published}, ignore_index=True)
-            
+                        
             df_update = pd.DataFrame({'Title': [result.title], 
                                       'Autors': [(result.authors)[0]], 
                                       'Published': [result.published]})
@@ -105,10 +100,10 @@ if st.sidebar.button("Scan papers 🔍"):
     # streamlit download button 
     btn = st.download_button("Download papers", 
                              data=buffer.getvalue(), 
-                             file_name="Papers-{}.zip".format(criterion))
+                             file_name="{}-{}.zip".format(keywords[0],criterion))
             
 
-st.sidebar.write('Developed by Anderson Almeida, for more information visit the GitHub of this application.')
+st.sidebar.write('Developed by Anderson Almeida, for more information visit the GitHub of this app.')
 
 
 
