@@ -86,9 +86,9 @@ if st.sidebar.button("Scan papers 🔍"):
             #                 'Autors': (result.authors)[0], 
             #                 'Published': result.published}, ignore_index=True)
             
-            df_update = pd.DataFrame({'Title': result.title, 
-                                      'Autors': (result.authors)[0], 
-                                      'Published': result.published})
+            df_update = pd.DataFrame({'Title': [result.title], 
+                                      'Autors': [(result.authors)[0]], 
+                                      'Published': [result.published]})
             
             df = pd.concat([df, df_update])
             empty_slot.dataframe(df)
